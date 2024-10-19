@@ -8,16 +8,24 @@ from . import operators
 from .properties import TOYSHOWTOOLS_Properties
 from .operators.update import TOYSHOWTOOLS_OT_check_for_update, TOYSHOWTOOLS_OT_update_addon, check_for_update
 
+# Read version from version.json
+addon_dir = os.path.dirname(__file__)
+version_file = os.path.join(addon_dir, 'version.json')
+
+with open(version_file, 'r') as f:
+    version_info = json.load(f)
+    addon_version = tuple(version_info['version'])
+
 bl_info = {
     "name": "ToyShowTools",
     "author": "Leonidas Maciel <leonrodrigues@huud.art>",
-    "version": (1, 0, 0),
+    "version": addon_version,
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Project Setup",
     "description": "Helper addon to set up project settings and manage lighting",
     "category": "Scene",
     "warning": "",  # Used to display update notifications
-    "doc_url": "https://github.com/Lokasta/ToyShowTools",  # Documentation URL
+    "doc_url": "https://github.com/Lokasta/ToyShowTools",
 }
 
 class TOYSHOWTOOLS_PT_main_panel(bpy.types.Panel):
