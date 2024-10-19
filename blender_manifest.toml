@@ -1,0 +1,14 @@
+schema_version = "1.0.0"
+
+id = "toyshowtools"
+version = "1.0.0"
+name = "ToyShowTools"
+tagline = "Tools for Toy Show Project"
+maintainer = "Leon Maciel <leonrodrigues@huud.art>"
+type = "add-on"
+
+blender_version_min = "4.2.0"
+
+license = [
+  "SPDX:GPL-3.0-or-later",
+]
