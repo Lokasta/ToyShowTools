@@ -54,6 +54,10 @@ class TOYSHOWTOOLS_OT_setup_project(bpy.types.Operator):
 
         blend_dir = os.path.dirname(blend_filepath)
         blend_filename = os.path.splitext(os.path.basename(blend_filepath))[0]
+
+        # Remove spaces from the filename
+        blend_filename = blend_filename.replace(" ", "")
+
         render_dir = os.path.join(blend_dir, 'RENDER', blend_filename)
 
         if not os.path.exists(render_dir):
