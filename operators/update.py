@@ -46,6 +46,9 @@ def update_addon():
         bpy.ops.preferences.addon_disable(module=addon_name)
         bpy.ops.preferences.addon_remove(module=addon_name)
         
+        # Refresh the addon list
+        bpy.ops.preferences.addon_refresh()
+        
         # Install the addon using the downloaded zip file
         try:
             bpy.ops.preferences.addon_install(filepath=save_path, overwrite=True)

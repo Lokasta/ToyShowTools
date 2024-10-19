@@ -9,8 +9,8 @@ from .properties import TOYSHOWTOOLS_Properties
 from .operators.update import TOYSHOWTOOLS_OT_check_for_update, TOYSHOWTOOLS_OT_update_addon, check_for_update
 
 bl_info = {
-    "name": "Project Setup Helper",
-    "author": "Your Name <your.email@example.com>",
+    "name": "ToyShowTools",
+    "author": "Leonidas Maciel <leonrodrigues@huud.art>",
     "version": (1, 0, 0),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Project Setup",
@@ -51,8 +51,8 @@ class TOYSHOWTOOLS_PT_preferences(bpy.types.AddonPreferences):
         col = layout.column()
         
         # Addon information
-        col.label(text="Name: Project Setup Helper")
-        col.label(text="Author: Your Name <your.email@example.com>")
+        col.label(text="Name: ToyShowTools")
+        col.label(text="Author: Leonidas Maciel <leonrodrigues@huud.art>")
         col.label(text="Version: 1.0.0")
         col.label(text="Blender: 4.2.0")
         col.label(text="Description: Helper addon to set up project settings and manage lighting")
