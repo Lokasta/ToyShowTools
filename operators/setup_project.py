@@ -13,6 +13,7 @@ class TOYSHOWTOOLS_OT_setup_project(bpy.types.Operator):
         # Set framerate to custom and set to 12 fps
         scene.render.fps = 12
         scene.render.fps_base = 1.0  # Ensure that fps_base is set to 1.0
+        scene.frame_step = 1
 
         # Set resolution to 1920 x 1920
         scene.render.resolution_x = 1920

@@ -12,3 +12,6 @@ blender_version_min = "4.2.0"
 license = [
   "SPDX:GPL-3.0-or-later",
 ]
+
+[permissions]
+network = "Check for updates from GitHub repository"
